@@ -10,12 +10,12 @@ namespace MultiShop.Catalog.Services.ProductImageServices
     public class ProductImageService : IProductImageService
     {
         private readonly IMapper _mapper;
-        private readonly IMongoCollection<Product> _productImageCollection;
+        private readonly IMongoCollection<ProductImage> _productImageCollection;
         public ProductImageService(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
-            _productImageCollection = database.GetCollection<Product>(_databaseSettings.ProductImageCollectionName);
+            _productImageCollection = database.GetCollection<ProductImage>(_databaseSettings.ProductImageCollectionName);
             _mapper = mapper;
         }
         public async Task CreateProductImageAsync(CreateProductImageDto createProductImageDto)
@@ -37,13 +37,13 @@ namespace MultiShop.Catalog.Services.ProductImageServices
 
         public async Task<GetByIdProductImageDto> GetByIdProductImageAsync(string id)
         {
-            var values = await _productImageCollection.Find<Product>(x => x.ProductID == id).FirstOrDefaultAsync();
+            var values = await _productImageCollection.Find<ProductImage>(x => x.ProductID == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductImageDto>(values);
         }
 
         public async Task UpdateProductImageAsync(UpdateProductImageDto updateProductImageDto)
         {
-            var values = _mapper.Map<Product>(updateProductImageDto);
+            var values = _mapper.Map<ProductImage>(updateProductImageDto);
             await _productImageCollection.FindOneAndReplaceAsync(x => x.ProductID == updateProductImageDto.ProductID, values);
         }
     }
