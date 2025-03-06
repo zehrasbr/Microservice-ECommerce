@@ -23,7 +23,7 @@ namespace MultiShop.Catalog.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductDetailById(string id)
         {
-            var values = _ProductDetailService.GetByIdProductDetailAsync(id);
+            var values = _productDetailService.GetByIdProductDetailAsync(id);
             return Ok(values);
         }
         [HttpPost]
