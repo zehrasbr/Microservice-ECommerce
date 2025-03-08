@@ -14,7 +14,7 @@ namespace MultiShop.Discount.Services
 
         public async Task CreateDiscountCouponAsync(CreateDiscountCouponDto createCouponDto)
         {
-            string query = "Insert Into Coupons (Code,Rate,IsAsctive,ValidDate) values (@code,@rate,@isActive,@validDate)";
+            string query = "Insert Into Coupons (Code,Rate,IsActive,ValidDate) values (@code,@rate,@isActive,@validDate)";
             var parametres = new DynamicParameters();
             parametres.Add("@code", createCouponDto.Code);
             parametres.Add("@rate", createCouponDto.Rate);
@@ -54,7 +54,7 @@ namespace MultiShop.Discount.Services
             parametres.Add("@couponId", id);
             using (var connection = _context.CreateConnection())
             {
-                var values = await connection.QueryFirstOrDefaultAsync<GetByIdDiscountCouponDto>(query);
+                var values = await connection.QueryFirstOrDefaultAsync<GetByIdDiscountCouponDto>(query, parametres);
                 return values;
             }
         }

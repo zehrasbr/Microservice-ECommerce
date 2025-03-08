@@ -15,15 +15,15 @@ namespace MultiShop.Discount.Controllers
             _discountService = discountService;
         }
         [HttpGet]
-        public async Task<IActionResult> CouponList()
+        public async Task<IActionResult> DicountCouponList()
         {
-            var values = _discountService.GetAllDiscountCouponAsync();
+            var values = await _discountService.GetAllDiscountCouponAsync();
             return Ok(values);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCouponById(int id)
+        public async Task<IActionResult> GetDicountCouponById(int id)
         {
-            var values = _discountService.GetByIdDiscountCouponAsync(id);
+            var values = await _discountService.GetByIdDiscountCouponAsync(id);
             return Ok(values);
         }
         [HttpPost]
