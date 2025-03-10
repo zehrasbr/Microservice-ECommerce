@@ -11,9 +11,9 @@ namespace MultiShop.Order.Application.Interfaces
     {
         Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
-        Task<T> CreateAsync(T entity);
-        Task<T> UpdateAsync(T entity);
-        Task<T> DeletAsync(T entity);
+        Task CreateAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeletAsync(T entity);
         Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter);
     }
 }
