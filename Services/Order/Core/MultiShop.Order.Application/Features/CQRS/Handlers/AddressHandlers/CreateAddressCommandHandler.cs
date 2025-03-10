@@ -27,5 +27,6 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
                 UserId = createAddressCommand.UserId
             });
         }
+
     }
 }
