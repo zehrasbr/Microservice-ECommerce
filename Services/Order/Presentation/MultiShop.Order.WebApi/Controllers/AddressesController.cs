@@ -30,7 +30,7 @@ namespace MultiShop.Order.WebApi.Controllers
             return Ok(values);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> AddressListById(int id)
+        public async Task<IActionResult> GetAddressById(int id)
         {
             var values = await _getAddressByIdQueryHandler.Handle(new GetAddressByIdQuery(id));
             return Ok(values);
