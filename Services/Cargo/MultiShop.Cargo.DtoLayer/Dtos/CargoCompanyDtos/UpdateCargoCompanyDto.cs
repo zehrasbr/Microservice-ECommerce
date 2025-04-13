@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Cargo.DtoLayer.Dtos.CreateCargoCompanyDto.cs
+namespace MultiShop.Cargo.DtoLayer.Dtos.CargoCompanyDtos.cs
 {
     public class UpdateCargoCompanyDto
     {
