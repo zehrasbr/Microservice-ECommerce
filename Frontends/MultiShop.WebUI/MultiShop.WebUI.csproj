@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Shared\Components\_FooterUILayoutComponentPartial\" />
     <Folder Include="Views\Shared\Components\_DirectoryAlertUILayoutComponentPartial\" />
   </ItemGroup>
 
