@@ -3,7 +3,7 @@ using MultiShop.Catalog.Services.CategoryServices;
 
 namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
 {
-    public class _NavbarUILayoutComponentPartial : ViewComponent
+   public class _NavbarUILayoutComponentPartial : ViewComponent
     {
         private readonly ICategoryService _categoryService;
         public _NavbarUILayoutComponentPartial(ICategoryService categoryService)
