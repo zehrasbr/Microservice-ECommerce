@@ -14,13 +14,4 @@
     <ProjectReference Include="..\..\Services\Catalog\MultiShop.Catalog\MultiShop.Catalog.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Shared\Components\_VendorDefaultComponentPartial\" />
-    <Folder Include="Views\Shared\Components\_SpeacialOfferComponentPartial\" />
-    <Folder Include="Views\Shared\Components\_FeatureProductsDefaultComponentPartial\" />
-    <Folder Include="Views\Shared\Components\_OfferDiscountDefaultComponentPartial\" />
-    <Folder Include="Views\Shared\Components\_FeatureDefaultComponentPartial\" />
-    <Folder Include="Views\Shared\Components\_CategoriesDefaultComponentPartial\" />
-  </ItemGroup>
-
 </Project>
