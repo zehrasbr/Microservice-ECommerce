@@ -1,6 +1,12 @@
-﻿namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
 {
-    public class _ScriptUILayoutComponentPartial
+    public class _ScriptUILayoutComponentPartial : ViewComponent
     {
+        public IViewComponentResult Invoke()
+        {
+            return View();
+        }
     }
 }

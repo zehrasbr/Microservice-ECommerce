@@ -1,6 +1,12 @@
-﻿namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
 {
-    public class _NavbarUILayoutComponentPartial
+    public class _NavbarUILayoutComponentPartial : ViewComponent
     {
+        public IViewComponentResult Invoke()
+        {
+            return View();
+        }
     }
 }

@@ -22,6 +22,8 @@
 
   <ItemGroup>
     <Folder Include="ViewComponents\DefaultViewComponents\" />
+    <Folder Include="Views\Shared\Components\_FooterUILayoutComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_ScriptUILayoutComponentPartial\" />
   </ItemGroup>
 
 </Project>
